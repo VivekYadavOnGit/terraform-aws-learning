@@ -64,45 +64,71 @@ Terraform provisions the following resources:
 
 ## Terraform Commands
 Initialize the project:
+```bash
 terraform init
+```
 
 ## Format Terraform files:
+```bash
 terraform fmt
+```
 
 ## Validate the configuration:
+```bash
 terraform validate
+```
 
 ## Preview infrastructure changes:
+```bash
 terraform plan
+```
 
 ## Create the infrastructure:
+```bash
 terraform apply
+```
 
 ## View Terraform-managed resources:
+```bash
 terraform state list
+```
 
 ## Display the EC2 public IP:
+```bash
 terraform output
+```
 
 ## Destroy the infrastructure:
+```bash
 terraform destroy
+```
 
 ## EC2 Access
 The EC2 instance can be accessed using SSH:
+```bash
 ssh -i ~/.ssh/terraform-key ec2-user@<EC2_PUBLIC_IP>
+```
 
 ## Nginx
 Nginx was installed on the EC2 instance:
+```bash
 sudo dnf install nginx -y
+```
 
 ## Start Nginx:
+```bash
 sudo systemctl start nginx
+```
 
 ## Check Nginx status:
+```bash
 sudo systemctl status nginx
+```
 
 The web server can be accessed using:
+```bash
 http://<EC2_PUBLIC_IP>
+```
 
 ## What I Learned
 - Infrastructure as Code using Terraform
@@ -122,4 +148,6 @@ The goal of this project was to gain practical experience with Terraform and AWS
 
 ## Cleanup
 To avoid unnecessary AWS charges, destroy the infrastructure after completing the project:
+```bash
 terraform destroy
+```
